@@ -9,8 +9,8 @@
         <ul>
         <%
             var list = '';
-            for (i = 0; i < alltitles.length; i++) {
-                list += '<li>' + alltitles[i].fields.titre_avec_lien_vers_le_catalogue + '</li>';
+            for (i = 0; i < documents.length; i++) {
+                list += '<li>' + documents[i].fields.titre_avec_lien_vers_le_catalogue + '</li>';
             }
         %>
         <%- list %>
