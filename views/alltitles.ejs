@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>All Titles</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>All Titles</h1>
+        <ul>
+        <%
+            var list = '';
+            for (i = 0; i < alltitles.length; i++) {
+                list += '<li>' + alltitles[i].fields.titre_avec_lien_vers_le_catalogue + '</li>';
+            }
+        %>
+        <%- list %>
+        </ul>
+    </body>
+</html>
