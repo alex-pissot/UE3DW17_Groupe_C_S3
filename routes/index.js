@@ -39,4 +39,15 @@ router.get('/alldocumentstype', function(req, res) {
     });
 });
 
+/* GET Docs without type. */
+router.get('/notype', function(req, res) {
+    var db = req.db;
+    var collection = db.get('documents');
+    collection.find({},{},function(e,docs){
+      res.render('notype', {
+        "documents" : docs
+      });
+    });
+});
+
 module.exports = router;

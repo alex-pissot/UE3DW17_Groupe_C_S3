@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Documents qui n'ont pas de champs "type_de_document"</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>Documents qui n'ont pas de champs "type_de_document"</h1>
+        <ul>
+            <%
+                var type = '';
+                for (i = 0; i < documents.length; i++) {
+                    if (typeof documents[i].fields.type_de_document == "undefined") {
+                        type += '<li>'+ "Titre : " + documents[i].fields.titre_avec_lien_vers_le_catalogue + " - Auteur : " + documents[i].fields.auteur + " - Nombre de réservations : " + documents[i].fields.nombre_de_reservations + " - Rang : " + documents[i].fields.rang + '</li>';
+                    }
+                }
+            %>
+            <%- type %>
+        </ul>
+    </body>
+</html>
