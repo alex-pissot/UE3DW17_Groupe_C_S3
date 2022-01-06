@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tous les types de documents</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+    </head>
+    <body>
+        <h1>Tous les types de documents</h1>
+        <ul>
+            <%
+                var type = '';
+                for (i = 0; i < documents.length; i++) {
+                    if (typeof documents[i].fields.type_de_document !== "undefined" && type.indexOf(documents[i].fields.type_de_document) == -1) {
+                        type += '<li>'+ documents[i].fields.type_de_document +'</li>';
+                    }
+                }
+            %>
+            <%- type %>
+        </ul>
+    </body>
+</html>
