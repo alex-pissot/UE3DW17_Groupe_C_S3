@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Tout les documents</h1>
+  
+    <table class="table">
+
+      <tbody>
+        <%  for (i = 0; i < documents.length; i++) { 
+          if(documents[i]._id!=null)%>
+          <tr>
+            
+              <td><%= documents[i].fields.titre_avec_lien_vers_le_catalogue %></td>
+              <th><input  type="button" value="Emprunter"> <p>Non</p></th>
+          </tr>
+          
+        
+          <% } %>
+      </tbody>
+  </table>
   </body>
 </html>
