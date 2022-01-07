@@ -28,6 +28,19 @@ router.get('/titlerank', function(req, res) {
   });
 });
 
+/* GET titles start with N*/
+router.get('/auteur',function(req,res){
+  var db = req.db;
+  var collection = db.get('documents');
+  collection.find({},{},function(e,docs){
+    res.render('auteurs', {
+      "auteurs":docs
+  
+    });
+  });
+ 
+});
+
 /* GET Docs type. */
 router.get('/alldocumentstype', function(req, res) {
     var db = req.db;
