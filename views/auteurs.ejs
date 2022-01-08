@@ -8,11 +8,11 @@
     <body>
         <h1>All Titles</h1>
         <ul>
-        <%
+         <%
             var list = '';
             for (i = 0; i < auteurs.length; i++) {
                 
-                var str = auteurs[i].fields.auteur;
+                let str = auteurs[i].fields.titre_avec_lien_vers_le_catalogue;
                 if(str.substr(0, 1)=='N'){
                 list += '<li>' + auteurs[i].fields.auteur + '</li>';
                 }
